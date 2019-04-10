@@ -38,6 +38,7 @@ class SearchRow extends React.Component{
         
         return(
             <div>
+                
                 <table key={this.props.searchResult.id} className="result-table">
 
                     <tbody>
@@ -45,14 +46,16 @@ class SearchRow extends React.Component{
                         <tr> 
                         
                             <td className="img-container">
+                            
                                 <img src={this.props.searchResult.thumb} alt={this.props.searchResult.title} />
+                            
                             </td>
 
                             <td className="detail-container">
                             
                                 <p className="result-header">{this.props.searchResult.title}</p>
                             
-                                <p className="result-details">{this.props.searchResult.artist} | {this.props.searchResult.year} - {this.props.searchResult.genre} - {this.props.searchResult.country}</p>
+                                <p className="result-details">{this.props.searchResult.track} {this.props.searchResult.year} - {this.props.searchResult.genre} - {this.props.searchResult.country}</p>
 
                                 <Button className="result-btn" value="View" onClick={this.showModal}>Details</Button>
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Input, Pagination  } from "antd";
+import { Input  } from "antd";// Pagination
 import 'antd/dist/antd.css';
 import '../../index.css';
 
@@ -62,7 +62,7 @@ export default class MainContent extends React.Component{
 
             results.forEach((searchResult) => {
                 const resultRow = <SearchRow key={searchResult.id} searchResult={searchResult} />
-                console.log(queryResults.pagination)
+                // console.log(queryResults.pagination)
                 
                 resultRows.push(resultRow);
             })
@@ -76,11 +76,11 @@ export default class MainContent extends React.Component{
         })
     }
 
-    onChange = () => {
-        // const urlString = "https://api.discogs.com/database/search?key=GxFSvWbHdHcHrEELcDEq&secret=QeCrnmxvBiQmAFfGrXuthavenZIcHiuv&q=" + searchTerm + "&?genre&per_page=15&page=1"
+    // onChange = () => {
+    //     const urlString = "https://api.discogs.com/database/search?key=GxFSvWbHdHcHrEELcDEq&secret=QeCrnmxvBiQmAFfGrXuthavenZIcHiuv&q=" + searchTerm + "&?genre&per_page=15&page=1"
 
-        console.log()
-    }
+    //     console.log()
+    // }
 
     searchChangeHandler(event){
         const searchTerm = event.target.value
@@ -110,11 +110,11 @@ export default class MainContent extends React.Component{
 
                 </div>
 
-                <Pagination 
+                {/* <Pagination 
                     size="small"
                     defaultCurrent={1} 
                     total={50}
-                    onChange={this.onChange} />
+                    onChange={this.onChange} /> */}
                 
 
             </section>
